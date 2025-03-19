@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subnetting Quiz</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#results {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none; /* Initially hidden */
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>Subnetting Quiz</h1>
+
+<form id="quiz-form">
+
+  <div class="question">
+    <p>1.  You have a network address of 192.168.1.0/24. You need to create 4 subnets. What subnet mask should you use?</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A. /25</label>
+      <label><input type="radio" name="q1" value="B"> B. /26</label>
+      <label><input type="radio" name="q1" value="C"> C. /27</label>
+      <label><input type="radio" name="q1" value="D"> D. /28</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>2.  Given the IP address 172.16.5.65/26, what is the network address?</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A. 172.16.5.0</label>
+      <label><input type="radio" name="q2" value="B"> B. 172.16.5.64</label>
+      <label><input type="radio" name="q2" value="C"> C. 172.16.5.1</label>
+      <label><input type="radio" name="q2" value="D"> D. 172.16.5.128</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>3. What does CIDR stand for?</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A. Classless Internet Domain Routing.</label>
+      <label><input type="radio" name="q3" value="B"> B. Classless Inter-Domain Routing.</label>
+      <label><input type="radio" name="q3" value="C"> C. Class Inter-Domain Routing.</label>
+      <label><input type="radio" name="q3" value="D"> D. Classless Internet Directory Routing.</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>4. What is the default subnet mask for a Class B network?</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A. 255.0.0.0</label>
+      <label><input type="radio" name="q4" value="B"> B. 255.255.0.0</label>
+      <label><input type="radio" name="q4" value="C"> C. 255.255.255.0</label>
+      <label><input type="radio" name="q4" value="D"> D. 255.255.255.255</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>5. What is the network address for the IP address 192.168.1.50/24?</p>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A. 192.168.1.0</label>
+      <label><input type="radio" name="q5" value="B"> B. 192.168.1.1</label>
+      <label><input type="radio" name="q5" value="C"> C. 192.168.1.50</label>
+      <label><input type="radio" name="q5" value="D"> D. 192.168.0.0</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>6. How many usable hosts are available in a /27 subnet?</p>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A. 30</label>
+      <label><input type="radio" name="q6" value="B"> B. 32</label>
+      <label><input type="radio" name="q6" value="C"> C. 62</label>
+      <label><input type="radio" name="q6" value="D"> D. 64</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>7. Which of the following is a valid host address in the 172.16.10.0/24 subnet?</p>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A. 172.16.10.0</label>
+      <label><input type="radio" name="q7" value="B"> B. 172.16.10.255</label>
+      <label><input type="radio" name="q7" value="C"> C. 172.16.10.1</label>
+      <label><input type="radio" name="q7" value="D"> D. All of the above</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>8. What is the broadcast address for the 10.0.0.0/25 subnet?</p>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A. 10.0.0.0</label>
+      <label><input type="radio" name="q8" value="B"> B. 10.0.0.127</label>
+      <label><input type="radio" name="q8" value="C"> C. 10.0.0.255</label>
+      <label><input type="radio" name="q8" value="D"> D. 10.0.0.128</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>9.  If you need 10 subnets for a class C network, what subnet mask would you use?</p>
+    <div class="options">
+      <label><input type="radio" name="q9" value="A"> A. /24</label>
+      <label><input type="radio" name="q9" value="B"> B. /26</label>
+      <label><input type="radio" name="q9" value="C"> C. /27</label>
+      <label><input type="radio" name="q9" value="D"> D. /28</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>10. What does VLSM stand for?</p>
+    <div class="options">
+      <label><input type="radio" name="q10" value="A"> A. Variable Length Subnet Masking.</label>
+      <label><input type="radio" name="q10" value="B"> B. Very Large Subnet Masking.</label>
+      <label><input type="radio" name="q10" value="C"> C. Virtual LAN Subnet Masking.</label>
+      <label><input type="radio" name="q10" value="D"> D. Valid Length Subnet Masking.</label>
+    </div>
+  </div>
+
+  <button type="submit">Submit Quiz</button>
+</form>
+
+<div id="results">
+  <h2>Results</h2>
+  <ul id="result-list"></ul>
+</div>
+
+
+<script>
+document.getElementById("quiz-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from submitting and reloading the page
+
+  const answers = {
+    q1: "B", // /26
+    q2: "B", // 172.16.5.64
+    q3: "B",
+    q4: "B",
+    q5: "A",
+    q6: "A",
+    q7: "C",
+    q8: "B",
+    q9: "D",
+    q10: "A"
+  };
+
+  let score = 0;
+  const resultList = document.getElementById("result-list");
+  resultList.innerHTML = ""; // Clear previous results
+
+  for (let i = 1; i <= 10; i++) {
+    const questionName = `q${i}`;
+    const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+
+    let userAnswer = selectedAnswer ? selectedAnswer.value : null;
+
+    const listItem = document.createElement("li");
+    listItem.textContent = `Question ${i}: `;
+
+    if (userAnswer === answers[questionName]) {
+      score++;
+      listItem.textContent += `Correct! You chose ${userAnswer}.`;
+      listItem.classList.add("correct");
+    } else {
+      listItem.textContent += `Incorrect. You chose ${userAnswer || "No answer"}, the correct answer is ${answers[questionName]}.`;
+      listItem.classList.add("incorrect");
+    }
+
+    resultList.appendChild(listItem);
+  }
+
+  document.getElementById("results").style.display = "block"; // Show the results
+
+  alert(`Your score is ${score} out of 10!`);
+
+});
+</script>
+
+</body>
+</html>
